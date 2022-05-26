@@ -1,0 +1,42 @@
+Hello fellow astronomers!
+
+I do a lot of outreach programs in various locations and it sometimes takes me an hour or more to build a plan for observing based on the topology of the area I will be setting up equipment.  What I most value is the alt/az information of objects followed by magnitude (light pollution is always a factor).  So I've written a small program that reads a flat file listing of M/NGC/IC objects and a separate file that contains some basic information and a list of objects I'm interested in observing.  It then outputs an html file for printing to be used in the field.  I do plan on making improvements and adding more objects such as double stars in the future.  I also forsee using it to generate output for my AstroPhotography sessions.  You will need to get the original data files from: 
+
+https://heasarc.gsfc.nasa.gov/W3Browse/all/ngc2000.html and click on the link to: <VII/118/ngc2000.dat>
+
+Steps to run
+
+create an ASCII/text file - name it what you will - I tend to use dates and names of places like 2022-06-01_West_ Thompson_Dam
+
+insert in the file the following  change the actual data to what ever you want:
+_____________________
+year 2022
+month 6
+date 1
+zone -4
+hour 21
+minute 30
+latitude 41.525
+longitude -72.075
+min_alt 30
+
+NGC457
+M44
+M67
+M81
+M82
+M97
+_________________
+
+Note:  zone is your time zone relative to GMT or UT
+latitude and longitude are your observing coordinates
+min_alt is the minimum height/altitude in degrees below which no objets will be listed. - in other words in most cases the angle of the tree line or other obstructions.
+The entire file IS CASE SENSISTIVE.
+
+After the 9 information fields you then list the objects you want to be potentially listed in the output file.  I have a book "Star Watch" by Philip S Harrington that lists objects by seasons and "WOW!" factor that I use for observing/outreach.  I pull most of my objects from his book.
+
+The program will request the file name for input (the above file you've created) and then generate the output file and in less than a second on my machine. I then send it to the printer after reviewing it.  Voila'  Note the output file name ends with a .html
+
+The program is written entirely in C and the code is provided.  I run it on linux although I'm sure it can be compiled on any OS that can compile C.  I plan on recompiling it for the venerable Amiga 3.1 OS which many folks are STILL using.  :*D
+
+Any questions?  You can email me at astronomy@mcleanreanresearch.com
